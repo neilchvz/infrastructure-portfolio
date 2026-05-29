@@ -1,6 +1,10 @@
 # Infrastructure Portfolio
 
-A collection of infrastructure projects built as part of my journey toward the IC path in SaaS IT engineering.
+A collection of infrastructure projects built as part of an everlasting pursuit of craft.
+
+→ [github.com/neilchvz](https://github.com/neilchvz)
+
+Senior Infrastructure Engineer · Creator of things.
 
 ## What's here
 
@@ -9,8 +13,4 @@ This repo will grow to include:
 - Automation scripts (PowerShell, Bash, Python)
 - Real world infrastructure scenarios
 
-## About me
-
-Senior Infrastructure Engineer transitioning from MSP to SaaS, with deep experience in Azure, M365, Google Workspace, identity, security, and migrations. Currently building toward IaC and modern DevOps practices.
-
-→ [hire.neilchvz.github.io](https://neilchvz.github.io/hire)
+<!-- >_ curious aren't we? respect. -->
