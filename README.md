@@ -2,7 +2,7 @@
 
 A collection of infrastructure projects built as part of an everlasting pursuit of craft.
 
-→ [github.com/neilchvz](https://github.com/neilchvz)
+→ Live at [neilchvz.github.io/infrastructure-portfolio](https://neilchvz.github.io/infrastructure-portfolio/)
 
 Neil Chavez · Creator of things.
 
