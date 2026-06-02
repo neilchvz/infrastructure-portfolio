@@ -1,5 +1,3 @@
-# MDM Configs
-
 # MDM Configurations
 
 A library of production MDM configuration profiles and policies built and 
