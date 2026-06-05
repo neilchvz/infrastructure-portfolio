@@ -56,6 +56,10 @@ Scripts for software installation and system tooling.
 | `macos-tooling/install-speedtest-cli/` | Install Ookla Speedtest CLI |
 | `macos-tooling/install-xcode-cli/` | Install Xcode Command Line Tools |
 
+----
+
+Part of the [Infrastructure Portfolio](https://neilchvz.github.io/infrastructure-portfolio) · Neil Chavez
+
 ---
 
 Neil Chavez · Creator of things.
