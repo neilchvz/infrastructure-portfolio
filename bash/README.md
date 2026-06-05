@@ -1,11 +1,10 @@
 # Bash Scripts
 
-A library of macOS shell scripts built and deployed across managed device 
-fleets. Covers security hardening, network management, user administration, 
-and system tooling.
-
-All scripts were built for real production use cases and deployed via 
-Addigy MDM or RMM tooling.
+A library of macOS shell scripts built for real-world fleet management and deployed
+in production via Addigy MDM and RMM tooling. Scripts are intentionally concise — these 
+are operational utilities designed for reliability and fast deployment, not frameworks.
+Covers security hardening, network management, user administration, and system tooling 
+across managed macOS device fleets.
 
 ---
 
