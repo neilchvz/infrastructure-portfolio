@@ -55,6 +55,12 @@ and Cloud PC management.
 | `intune/sharepoint-onedrive-auto-sync/` | Auto-mount SharePoint sites to OneDrive |
 | `intune/windows365-disable-local-drive-redirection/` | Block local drive access on Cloud PCs |
 
+---
+
+Part of the [Infrastructure Portfolio](https://neilchvz.github.io/infrastructure-portfolio) · Neil Chavez
+
+---
+
 Neil Chavez · Creator of things.
 
 <!-- >_ curious aren't we? respect. -->
