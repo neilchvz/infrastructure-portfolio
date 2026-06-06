@@ -71,10 +71,10 @@ in the loop.
                      ▼
 ┌─────────────────────────────────────────────────────┐
 │  Structured alert email                             │
-│  Subject: [Company: The Class] -                   │
+│  Subject: [Company: The Class] -                    │
 │           Internet Download Speed Low               │
 │           (LA_Santa Monica)                         │
-│  To: noc@company.com                               │
+│  To: noc@company.com                                │
 └────────────────────┬────────────────────────────────┘
                      │  ConnectWise polls mailbox
                      ▼
@@ -89,10 +89,10 @@ in the loop.
           ▼                     ▼
 ┌──────────────────┐   ┌──────────────────────────────┐
 │  Standard client │   │  24x7 client                 │
-│  Ticket created  │   │  Ticket created               │
-│  NOC board       │   │  NOC board                    │
-│  Business hours  │   │  On-call tech paged           │
-│  SLA applied     │   │  Escalation chain active      │
+│  Ticket created  │   │  Ticket created              │
+│  NOC board       │   │  NOC board                   │
+│  Business hours  │   │  On-call tech paged          │
+│  SLA applied     │   │  Escalation chain active     │
 └──────────────────┘   └──────────────────────────────┘
 ```
 
