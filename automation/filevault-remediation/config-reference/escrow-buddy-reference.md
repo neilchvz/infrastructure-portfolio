@@ -99,4 +99,4 @@ Both must be present for the workflow to succeed.
 
 ---
 
-*Part of the [Automation Portfolio](https://github.com/neilchvz) · Neil Chavez · Creator of things.*
+*Part of the [Automation Portfolio](https://github.com/neilchvz)*

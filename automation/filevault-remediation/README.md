@@ -1,4 +1,4 @@
-# FileVault Compliance Automation
+# FileVault Remediation Automation
 
 ## The Problem
 
@@ -68,7 +68,7 @@ Addigy evaluates Device Facts on every device check-in
 │  Escrow Buddy     │   │                        │
 │  installs +       │   │  Deferred enablement   │
 │  rotates key      │   │  logout/login prompt   │
-│  silently         │   |  + IT notification     |
+│  silently         │   │  + IT notification     │
 │                   │   └──────────┬─────────────┘
 │  MDM profile      │              │
 │  escrows new key  │              │
@@ -79,8 +79,8 @@ Addigy evaluates Device Facts on every device check-in
            │                       │
            ▼                       ▼
   Device Fact updates: FV=ON, Key Escrowed=ON
-           │
-           ▼
+           │                       │
+           ▼                       ▼
   Device exits flex policy filter automatically
   No technician involvement at any stage
 ```
@@ -195,7 +195,7 @@ cycle, without any manual intervention or scheduled audit.
 ## Repository Structure
 
 ```
-filevault-compliance-automation/
+filevault-remediation/
 ├── README.md                                        ← this file
 └── config-reference/
     ├── flex-policy-escrow-remediation.md            ← Policy 1 configuration reference
@@ -217,4 +217,4 @@ filevault-compliance-automation/
 
 ---
 
-*Part of the [Automation Portfolio](https://github.com/neilchvz) · Neil Chavez · Creator of things.*
+*Part of the [Automation Portfolio](https://github.com/neilchvz)*

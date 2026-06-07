@@ -104,4 +104,4 @@ flex policy filter, and Escrow Buddy is uninstalled.
 
 ---
 
-*Part of the [Automation Portfolio](https://github.com/neilchvz) · Neil Chavez · Creator of things.*
+*Part of the [Automation Portfolio](https://github.com/neilchvz)*

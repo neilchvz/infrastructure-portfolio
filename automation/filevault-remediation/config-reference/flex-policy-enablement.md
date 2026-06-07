@@ -115,4 +115,4 @@ for any reason, it is detected and remediated automatically.
 
 ---
 
-*Part of the [Automation Portfolio](https://github.com/neilchvz) · Neil Chavez · Creator of things.*
+*Part of the [Automation Portfolio](https://github.com/neilchvz)*
