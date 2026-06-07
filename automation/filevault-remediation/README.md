@@ -1,4 +1,4 @@
-# FileVault Remediation Automation
+# FileVault Compliance Automation
 
 ## The Problem
 
