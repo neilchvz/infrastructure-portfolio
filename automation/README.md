@@ -10,7 +10,7 @@ Each workflow in this repository documents a complete end-to-end solution: the p
 |----------|-------------|
 | [M365 Offboarding Automation](./offboarding/) | Interactive PowerShell script guiding L1 technicians through a complete M365 offboard — hybrid and cloud-only environments, full audit output, license removal sequenced last by design. |
 | [Production Monitoring & Alert Routing](./production-monitoring/) | Site-aware ISP monitoring pipeline across 15–20 client sites — structured alert naming drives automatic ticket creation, SLA assignment, and 24x7 on-call paging in ConnectWise. |
-| [FileVault Compliance Automation](./filevault-compliance-automation/) | Continuous macOS compliance automation using Addigy Flex Policies — detects and remediates both disabled FileVault and missing key escrow across managed fleets with zero technician involvement. |
+| [FileVault Compliance Automation](./filevault-remediation/) | Continuous macOS compliance automation using Addigy Flex Policies — detects and remediates both disabled FileVault and missing key escrow across managed fleets with zero technician involvement. |
 
 ---
 
