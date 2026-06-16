@@ -449,6 +449,18 @@
             animation-fill-mode: forwards;
         }
 
+        section:nth-child(9) {
+            animation-delay: 0.5s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
+        section:nth-child(10) {
+            animation-delay: 0.55s;
+            opacity: 0;
+            animation-fill-mode: forwards;
+        }
+
         @media (max-width: 600px) {
             header {
                 padding: 48px 0 0;
@@ -483,9 +495,10 @@
                         <div class="project-name">Okta Identity Infrastructure — Caira HQ</div>
                         <div class="project-desc">Users, groups, app assignments, and policies declared in HCL and
                             managed via the Okta Terraform provider. CSV-driven user provisioning simulates an HRIS
-                            integration — adding a user means adding a row, no code changes required. State stored
-                            remotely in HCP Terraform. All changes flow through a GitHub Actions CI/CD pipeline —
-                            automated checks on every PR, manual approval gate in HCP Terraform before apply.</div>
+                            integration — onboarding requests flow through a TypeScript service that creates branches
+                            and opens PRs automatically. Terraform remains the only system that touches Okta directly.
+                            State stored remotely in HCP Terraform. All changes flow through a GitHub Actions CI/CD
+                            pipeline — automated checks on every PR, manual approval gate in HCP Terraform before apply.</div>
                     </div>
                     <span class="project-arrow">↗</span>
                 </a>
@@ -505,6 +518,42 @@
                         <div class="project-desc">Okta federating with Google Workspace via SAML 2.0 — SSO, automated
                             user provisioning via SCIM, custom domain configuration, and NIST 800-63B aligned password
                             and session policies. Running live on cairahq.com.</div>
+                    </div>
+                    <span class="project-arrow">↗</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Okta -->
+        <section>
+            <div class="section-label">Okta</div>
+            <h2>Okta</h2>
+            <p class="section-desc">Identity automation and event-driven workflows built on the Okta platform.</p>
+            <div class="projects">
+                <a class="project-card"
+                    href="https://github.com/neilchvz/cairahq-platform/tree/main/workflows/okta"
+                    target="_blank">
+                    <div class="project-info">
+                        <div class="project-name">Okta Workflows — Identity Lifecycle Automation</div>
+                        <div class="project-desc">Event-driven automation triggered by Okta identity events — new user creation fires an admin notification and a personalized welcome email, user deactivation fires an offboarding alert. Built on Okta Workflows with Gmail as the delivery layer.</div>
+                    </div>
+                    <span class="project-arrow">↗</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- TypeScript -->
+        <section>
+            <div class="section-label">TypeScript</div>
+            <h2>TypeScript</h2>
+            <p class="section-desc">Production services and API integrations built in TypeScript and Node.js.</p>
+            <div class="projects">
+                <a class="project-card"
+                    href="https://github.com/neilchvz/cairahq-platform/tree/main/workflows/typescript"
+                    target="_blank">
+                    <div class="project-info">
+                        <div class="project-name">TypeScript Onboarding Service — Caira HQ</div>
+                        <div class="project-desc">A hosted Express service that provides a web UI for user lifecycle management. Form submission triggers a GitHub API call that reads the user roster CSV, appends or removes a row, creates a branch, and opens a PR — Terraform provisions the user on merge. Deployed on Railway with basic auth. Built in TypeScript with Octokit.</div>
                     </div>
                     <span class="project-arrow">↗</span>
                 </a>
@@ -627,11 +676,7 @@
                 <a class="project-card" href="https://github.com/neilchvz/cairahq-platform/tree/main" target="_blank">
                     <div class="project-info">
                         <div class="project-name">Caira HQ Platform</div>
-                        <div class="project-desc">Okta federating with Google Workspace via SAML, automated user
-                            provisioning via SCIM, custom domains, and security policies aligned to NIST 800-63B.
-                            Identity infrastructure managed as code via Terraform with a full GitOps pipeline — GitHub
-                            Actions for CI/CD, HCP Terraform for remote state and approvals. Running on cairahq.com.
-                        </div>
+                        <div class="project-desc">A production-grade identity and platform engineering lab running on cairahq.com. Okta federating with Google Workspace via SAML 2.0, automated user provisioning via SCIM, event-driven lifecycle automation via Okta Workflows, and a TypeScript onboarding service hosted on Railway. Identity infrastructure managed as code via Terraform with a full GitOps pipeline — GitHub Actions for CI/CD, HCP Terraform for remote state and approvals.</div>
                     </div>
                     <span class="project-arrow">↗</span>
                 </a>
