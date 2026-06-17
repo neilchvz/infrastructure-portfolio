@@ -38,7 +38,7 @@ hardware, this uses the user's login credentials to encrypt the volume.
 **2. FDERecoveryKeyEscrow**
 Ensures the recovery key generated during FileVault enablement is
 automatically escrowed to Addigy. This is applied in the same profile
-to guarantee escrow occurs at the moment of encryption — not as a
+to guarantee escrow occurs at the moment of encryption, not as a
 separate step that could be missed.
 
 ---
