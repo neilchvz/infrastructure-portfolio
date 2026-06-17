@@ -13,13 +13,13 @@ or name resolution issues.
 ## Why this script exists
 A go-to network troubleshooting tool for L1.5 and L2 technicians. 
 When users experience issues reaching internal resources, websites, 
-or services — particularly after DNS changes, VPN connections, or 
-network migrations — flushing the DNS cache is a fast first step 
+or services, particularly after DNS changes, VPN connections, or 
+network migrations, flushing the DNS cache is a fast first step 
 that resolves a surprising number of issues without further escalation.
 
 ## Deployment context
 Run on-demand via Addigy or RMM through a remote terminal session. 
-No MDM deployment needed — this is a technician tool, not a fleet 
+No MDM deployment needed: this is a technician tool, not a fleet 
 policy.
 
 ## Usage
