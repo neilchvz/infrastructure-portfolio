@@ -15,13 +15,13 @@ This script was born out of two distinct use cases:
 **Use case 1 — Profile-averse environments**
 A SaaS development client did not want MDM configuration profiles pushed 
 to their devices. However they agreed on a baseline of non-negotiable 
-security requirements — FileVault and firewall enforcement. This script 
+security requirements: FileVault and firewall enforcement. This script 
 allowed those settings to be enforced through the Addigy compliance 
 engine without deploying a configuration profile.
 
 **Use case 2 — Admin override remediation**
 The Security and Privacy Global Policy profile enables the firewall 
-on managed devices — but local admins can turn it off again. This 
+on managed devices but local admins can turn it off again. This 
 script runs automatically via the compliance engine when a device 
 is detected with the firewall disabled, remediating the override 
 without manual intervention.
