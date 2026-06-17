@@ -46,7 +46,7 @@ separate step that could be missed.
 ## User Experience
 
 Unlike the escrow remediation policy, this one is visible to the user.
-Addigy's FileVault Device Setting uses **deferred enablement**: FileVault
+Addigy's FileVault Device Setting uses **deferred enablement**. FileVault
 does not begin encrypting immediately after the profile is installed.
 Instead, encryption is triggered the next time a Secure Token user
 performs a full logout and login.
