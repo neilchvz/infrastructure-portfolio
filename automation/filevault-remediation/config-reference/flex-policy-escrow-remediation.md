@@ -4,11 +4,11 @@
 
 Automatically remediates macOS devices that have FileVault enabled but no
 recovery key escrowed to Addigy. This covers devices that were encrypted
-before Addigy was enrolled — the most common escrow gap in a managed fleet.
+before Addigy was enrolled, the most common escrow gap in a managed fleet.
 
 When Addigy enables FileVault itself via MDM profile, it captures and escrows
 the recovery key automatically. When FileVault was already enabled before
-Addigy enrollment, no key escrow occurs — the device appears encrypted but
+Addigy enrollment, no key escrow occurs. The device appears encrypted but
 IT has no access to the recovery key.
 
 This policy detects that condition continuously and remediates it silently,
@@ -27,7 +27,7 @@ Both conditions must be true for a device to be added to this policy.
 Devices are automatically removed from the policy once the key is escrowed
 and the Device Facts update on next check-in.
 
-This is a continuous policy — not a one-time run. If a device's escrow
+This is a continuous policy, not a one-time run. If a device's escrow
 status changes (e.g. a key becomes invalid after a major macOS update),
 it will re-enter the policy and be remediated again automatically.
 
@@ -41,7 +41,7 @@ it will re-enter the policy and be remediated again automatically.
 Escrow Buddy is an open-source macOS authorization plugin developed by
 Netflix's Client Systems Engineering team. It integrates with the macOS
 login authorization database and silently generates a new FileVault personal
-recovery key the next time the user logs in — without displaying any
+recovery key the next time the user logs in, without displaying any
 additional prompts or interrupting the user experience.
 
 > See: [Escrow Buddy on GitHub](https://github.com/macadmins/escrow-buddy)
@@ -61,7 +61,7 @@ installs but does not trigger key generation.
 ```
 Once the key has been escrowed and the Device Fact updates, the device
 falls out of the flex policy filter. The removal command uninstalls
-Escrow Buddy — keeping the device clean and ensuring the tool is only
+Escrow Buddy, keeping the device clean and ensuring the tool is only
 present when actively needed.
 
 ---
@@ -95,7 +95,7 @@ flex policy filter, and Escrow Buddy is uninstalled.
 
 - macOS major version upgrades can reset the authorization database,
   which deactivates Escrow Buddy. The continuous policy filter catches
-  this automatically — if escrow status drops to false after an upgrade,
+  this automatically. If escrow status drops to false after an upgrade,
   the device re-enters the policy.
 - Escrow Buddy only works with MDM-based escrow. It is not compatible
   with server-based escrow solutions like Crypt Server.
