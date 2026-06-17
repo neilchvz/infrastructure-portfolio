@@ -2,14 +2,14 @@
 
 ## The Problem
 
-At a busy MSP managing multiple Microsoft 365 clients, user offboarding was a fully manual process handled by L1 technicians. On average, a complete offboard took **1 to 1.5 hours per user** — and that was on a good day.
+At a busy MSP managing multiple Microsoft 365 clients, user offboarding was a fully manual process handled by L1 technicians. On average, a complete offboard took **1 to 1.5 hours per user**, and that was on a good day.
 
 The real issues were:
 
 - **Every client was different.** Some ran cloud-only Entra ID environments. Others ran hybrid setups with on-prem Active Directory synced to Entra. L1 techs had to know which client was which before touching anything, and mistakes happened.
-- **No standardization.** There was no checklist enforced at the tooling level. Steps got missed — licenses left assigned, shared mailboxes not hidden from the GAL, sessions not revoked, OneDrive files inaccessible after the account was gone.
+- **No standardization.** There was no checklist enforced at the tooling level. Steps got missed: licenses left assigned, shared mailboxes not hidden from the GAL, sessions not revoked, OneDrive files inaccessible after the account was gone.
 - **L2 engineers were doing L1 work.** Because offboards touched Exchange Online, Entra ID, on-prem AD, SharePoint, and licensing — all in one ticket — L1s would frequently escalate or ask for help. L2 time was being burned on repetitive, low-complexity work that should never have reached them.
-- **Audit trail was inconsistent.** What got removed, what licenses were assigned, who got mailbox access — this was documented manually and inconsistently, or not at all.
+- **Audit trail was inconsistent.** What got removed, what licenses were assigned, who got mailbox access: this was documented manually and inconsistently, or not at all.
 
 The goal was to eliminate all of that. Give L1 a single script. Let them answer prompts. Have the script handle everything else and produce a clean audit-ready output they can paste directly into the ticket.
 
@@ -38,7 +38,7 @@ The technician answers questions. The script does the work.
 | **Mailbox Access** | Grants Full Access and Send As to specified recipients |
 | **Mail Forwarding** | Sets SMTP forwarding to a specified address if required |
 | **OneDrive Access** | Grants Site Owner access to the user's OneDrive; outputs direct admin link |
-| **License Removal** | Strips all assigned M365 licenses — runs **last** to avoid breaking mailbox conversion and OneDrive access steps |
+| **License Removal** | Strips all assigned M365 licenses, runs **last** to avoid breaking mailbox conversion and OneDrive access steps |
 | **Audit Output** | Produces a structured summary of all actions taken, suitable for pasting into a ticket note |
 
 ---
@@ -135,7 +135,7 @@ Add-WindowsCapability -Online -Name Rsat.ActiveDirectory.DS-LDS.Tools~~~~0.0.1.0
 
 ### Required Admin Roles
 
-This script is designed to be run with a **scoped admin account** — not Global Admin. The following roles are sufficient:
+This script is designed to be run with a **scoped admin account**, not Global Admin. The following roles are sufficient:
 
 | Role | Purpose |
 |------|---------|
@@ -154,11 +154,11 @@ This script is designed to be run with a **scoped admin account** — not Global
 .\Invoke-UserOffboard.ps1
 ```
 
-No parameters. The script is fully interactive — it will prompt for everything it needs.
+No parameters. The script is fully interactive: it will prompt for everything it needs.
 
 ### Hybrid Environments
 
-For clients with on-prem AD, the script **must be run from a machine that can reach the domain controller** — either a domain-joined workstation or directly on the DC. If the script cannot reach the domain, it will detect this and exit with a clear message rather than proceeding.
+For clients with on-prem AD, the script **must be run from a machine that can reach the domain controller**, either a domain-joined workstation or directly on the DC. If the script cannot reach the domain, it will detect this and exit with a clear message rather than proceeding.
 
 ---
 
@@ -226,9 +226,9 @@ Offboarding became an L1-completable task with no technical M365 knowledge requi
 ## Notes
 
 - The script captures a full audit snapshot **before** making any changes. Even if the script fails partway through, the pre-change state is already recorded.
-- Any steps that fail during execution are captured and included in the summary output under `ERRORS / WARNINGS` — so L1 knows exactly what to manually follow up on.
+- Any steps that fail during execution are captured and included in the summary output under `ERRORS / WARNINGS`, so L1 knows exactly what to manually follow up on.
 - The script disconnects all sessions cleanly on completion.
-- **License removal runs last by design.** Converting a mailbox to Shared and granting OneDrive access both require an active Exchange/SharePoint license. Removing licenses first causes those steps to fail silently — a common mistake in manual offboards.
+- **License removal runs last by design.** Converting a mailbox to Shared and granting OneDrive access both require an active Exchange/SharePoint license. Removing licenses first causes those steps to fail silently, a common mistake in manual offboards.
 - OneDrive access uses the PnP.PowerShell `Set-PnPTenantSite` method, which grants Site Owner permissions to the recipient's OneDrive library. This is the Microsoft-recommended approach for post-offboard file access. The direct OneDrive link is captured and included in the summary output so the L1 can verify access without navigating the SharePoint Admin Center.
 
 ---
