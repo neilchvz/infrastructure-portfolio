@@ -60,8 +60,8 @@ does the routing.
 ## Client Name Must Match Exactly
 
 The client name in the alert must match the company name in ConnectWise
-character for character. A mismatch causes the parser to fail silently —
-the ticket is created but not associated with any client, and no SLA
+character for character. A mismatch causes the parser to fail silently.
+The ticket is created but not associated with any client, and no SLA
 or on-call routing is applied.
 
 Before creating a new alert, confirm the exact company name in ConnectWise:
