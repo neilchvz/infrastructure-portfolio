@@ -9,7 +9,7 @@ on macOS devices, handling both modern and legacy macOS versions.
 - If already installed, exits cleanly with no action taken
 - If not installed, detects the macOS build version to determine 
   the correct installation approach
-- For Catalina and newer — fetches the latest non-beta CLI tools 
+- For Catalina and newer it fetches the latest non-beta CLI tools 
   from `softwareupdate`
 - For Mojave and older it uses a legacy `softwareupdate` label format
 - Installs the latest available version silently
