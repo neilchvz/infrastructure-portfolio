@@ -2,7 +2,7 @@
 
 ## Overview
 
-Addigy alert names are not just labels — they are the primary data payload
+Addigy alert names are not just labels, they are the primary data payload
 delivered to ConnectWise Manage via email. The alert name becomes the email
 subject line, which the ConnectWise email parser reads to automatically
 route, tag, and classify the resulting ticket.
