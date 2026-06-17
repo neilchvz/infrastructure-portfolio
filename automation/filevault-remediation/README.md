@@ -4,8 +4,8 @@
 
 FileVault disk encryption is a non-negotiable security baseline across
 every managed macOS client fleet. At an MSP managing dozens of client
-environments, ensuring every device was encrypted — and that the IT
-team had access to every recovery key — was a persistent operational
+environments, ensuring every device was encrypted, and that the IT
+team had access to every recovery key, was a persistent operational
 challenge.
 
 Two distinct failure modes existed:
@@ -13,7 +13,7 @@ Two distinct failure modes existed:
 **1. FileVault not enabled**
 The global MDM enrollment profile was designed to enable FileVault on
 every enrolled device. It worked most of the time. But edge cases slipped
-through — devices enrolled outside the standard workflow, MDM profile
+through: devices enrolled outside the standard workflow, MDM profile
 failures, or users with local admin rights who disabled encryption after
 the fact. These devices existed in a blind spot: non-compliant and
 undetected until someone looked.
@@ -21,8 +21,8 @@ undetected until someone looked.
 **2. FileVault enabled, recovery key not escrowed**
 When Addigy enables FileVault itself, it captures and escrows the
 recovery key to the device record automatically. When a device arrives
-with FileVault already enabled — common with employee-owned machines,
-devices migrated from another MDM, or Macs set up before enrollment —
+with FileVault already enabled, common with employee-owned machines,
+devices migrated from another MDM, or Macs set up before enrollment,
 no key escrow occurs. The device appears encrypted and healthy but
 IT has no access to the recovery key.
 
@@ -39,7 +39,7 @@ being available at the moment someone thought to check.
 
 ## The Solution
 
-Two continuous Addigy Flex Policies — one for each failure mode —
+Two continuous Addigy Flex Policies, one for each failure mode,
 that detect non-compliant devices automatically and remediate them
 without any technician involvement.
 
@@ -123,17 +123,17 @@ command. The device exits the policy filter on next check-in.
 
 **Filter:** FileVault Enabled = `False`
 
-Targets devices with FileVault completely off — whether due to MDM
+Targets devices with FileVault completely off, whether due to MDM
 profile failure at enrollment or a user disabling it after the fact.
 
 **Remediation:**
 
 A single MDM configuration profile combining FileVault enablement
 and `FDERecoveryKeyEscrow` in one payload. FileVault is enabled and
-the recovery key is escrowed to Addigy at the same time — no second
+the recovery key is escrowed to Addigy at the same time. No second
 step required.
 
-**User experience:** Addigy uses deferred enablement — the MDM profile
+**User experience:** Addigy uses deferred enablement: the MDM profile
 installs silently, but encryption doesn't begin until the user performs
 a full logout and login. At logout, macOS presents a prompt asking the
 user to enter their password to confirm FileVault enablement. A notification
@@ -166,7 +166,7 @@ unambiguous.
 
 ## Continuous Compliance
 
-Both policies run indefinitely — not as a one-time remediation. Addigy
+Both policies run indefinitely. Not as a one-time remediation. Addigy
 evaluates Device Facts on every device check-in. If a device's compliance
 status changes for any reason:
 
