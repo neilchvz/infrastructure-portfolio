@@ -16,13 +16,13 @@ remotely via terminal without end user involvement.
 Monitoring client ISP performance required a consistent, reliable way 
 to run speed tests remotely. Rather than asking end users to locate 
 and run an app, this script deployed the Speedtest CLI silently via 
-RMM — allowing L2 technicians to call `speedtest` directly through 
+RMM, allowing L2 technicians to call `speedtest` directly through 
 a backstage terminal session and pull results without any user 
 interaction.
 
 ## Origin and context
 Originally deployed via RMM before the fleet transitioned to Addigy. 
-Kept as a reference — Addigy includes its own built-in Speedtest 
+Kept as a reference, Addigy includes its own built-in Speedtest 
 functionality, making this script largely legacy. Included here to 
 document the evolution of the tooling approach.
 
