@@ -3,7 +3,7 @@
 ## Overview
 
 ConnectWise Manage's email parser is what transforms a raw Addigy alert
-email into a properly routed, SLA-bound, client-tagged support ticket —
+email into a properly routed, SLA-bound, client-tagged support ticket,
 automatically, with no technician involvement.
 
 This document describes how the parser rules are structured to support
@@ -100,7 +100,7 @@ outside business hours and the client is flagged as 24x7:
 3. Tech acknowledges within SLA window or escalation continues
 
 This is entirely driven by the ticket being correctly tagged to the right
-client — which flows from the alert name being correctly structured.
+client, which flows from the alert name being correctly structured.
 A misconfigured alert name breaks the entire escalation chain.
 
 ---
@@ -110,11 +110,11 @@ A misconfigured alert name breaks the entire escalation chain.
 When onboarding a new monitored site, the following must be configured
 in order:
 
-1. **Confirm company name** in ConnectWise — exact match required
-2. **Create Device Facts** in Addigy — one for upload, one for download
+1. **Confirm company name** in ConnectWise, exact match required
+2. **Create Device Facts** in Addigy: one for upload, one for download
 3. **Create Flex Policy** scoped to the designated office device by serial number
-4. **Create Monitoring Alerts** in Addigy — one per metric, using the correct naming convention (see `alert-naming-convention.md`)
-5. **Confirm parser rule exists** in ConnectWise for the new client — or create one
+4. **Create Monitoring Alerts** in Addigy: one per metric, using the correct naming convention (see `alert-naming-convention.md`)
+5. **Confirm parser rule exists** in ConnectWise for the new client or create one
 6. **Set thresholds** based on full stack analysis (see `threshold-guide.md`)
 7. **Verify end-to-end** — trigger a test alert and confirm the ticket is created with the correct client, board, type, and SLA
 
