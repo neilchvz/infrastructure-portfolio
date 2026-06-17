@@ -17,7 +17,7 @@ Iterates through all local user accounts with a UID of 500 or above
 SecureToken status for each using `sysadminctl`.
 
 ## When to use this
-- Before rotating or re-escrowing a FileVault recovery key — you need 
+- Before rotating or re-escrowing a FileVault recovery key, you need 
   to know which user account has SecureToken to perform the operation
 - During audits to verify SecureToken is assigned to the correct accounts
 - When troubleshooting FileVault unlock issues on a device
