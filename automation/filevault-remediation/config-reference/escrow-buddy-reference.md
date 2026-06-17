@@ -11,7 +11,7 @@ keys on Macs that lack a valid escrowed key in MDM.
 > **Netflix Tech Blog:** [Read the announcement](https://netflixtechblog.com/escrow-buddy-an-open-source-tool-from-netflix-for-remediation-of-missing-filevault-keys-in-mdm-815aef5107cd)
 
 Escrow Buddy is maintained under the Mac Admins Open Source organization
-on GitHub — the same community home as Nudge, Munki, and other widely
+on GitHub, the same community home as Nudge, Munki, and other widely
 adopted Mac management tools. It is licensed under Apache 2.0.
 
 ---
@@ -30,7 +30,7 @@ At scale across multiple client fleets, that process is:
 
 Escrow Buddy eliminates all of that. It integrates with the macOS login
 authorization database and handles key generation silently at the next
-login — no technician involvement, no user disruption, no waiting for
+login: no technician involvement, no user disruption, no waiting for
 a live terminal window.
 
 The decision to use Escrow Buddy rather than writing a custom solution
@@ -88,7 +88,7 @@ Both must be present for the workflow to succeed.
 
 ## Important Notes
 
-- Escrow Buddy only works with MDM-based escrow — not with server-based
+- Escrow Buddy only works with MDM-based escrow, not with server-based
   solutions like Crypt Server or Cauliflower Vest.
 - macOS major version upgrades can reset the authorization database,
   deactivating Escrow Buddy. The continuous Flex Policy filter catches
