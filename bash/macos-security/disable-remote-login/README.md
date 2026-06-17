@@ -11,7 +11,7 @@ SSH connections to the device.
 ## Why this script exists
 Remote Login (SSH) represents an unnecessary attack surface on managed 
 endpoints where remote access is handled through a managed RMM tool. 
-This script is a companion to the Disable Remote Desktop script — 
+This script is a companion to the Disable Remote Desktop script, 
 together they close both inbound remote access vectors on macOS as 
 part of a hardened security baseline.
 
