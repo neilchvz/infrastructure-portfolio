@@ -495,10 +495,11 @@
                         <div class="project-name">Okta Identity Infrastructure — Caira HQ</div>
                         <div class="project-desc">Users, groups, app assignments, and policies declared in HCL and
                             managed via the Okta Terraform provider. CSV-driven user provisioning simulates an HRIS
-                            integration — onboarding requests flow through a TypeScript service that creates branches
-                            and opens PRs automatically. Terraform remains the only system that touches Okta directly.
-                            State stored remotely in HCP Terraform. All changes flow through a GitHub Actions CI/CD
-                            pipeline — automated checks on every PR, manual approval gate in HCP Terraform before apply.</div>
+                            integration, with onboarding requests flowing through a TypeScript service that creates
+                            branches and opens PRs automatically. Terraform remains the only system that touches Okta
+                            directly. State stored remotely in HCP Terraform. All changes flow through a GitHub Actions
+                            CI/CD pipeline with automated checks on every PR and a manual approval gate in HCP Terraform
+                            before apply.</div>
                     </div>
                     <span class="project-arrow">↗</span>
                 </a>
@@ -515,9 +516,9 @@
                     target="_blank">
                     <div class="project-info">
                         <div class="project-name">Okta + Google Workspace — Caira HQ</div>
-                        <div class="project-desc">Okta federating with Google Workspace via SAML 2.0 — SSO, automated
-                            user provisioning via SCIM, custom domain configuration, and NIST 800-63B aligned password
-                            and session policies. Running live on cairahq.com.</div>
+                        <div class="project-desc">Okta federating with Google Workspace via SAML 2.0, with SSO,
+                            automated user provisioning via SCIM, custom domain configuration, and NIST 800-63B aligned
+                            password and session policies. Running live on cairahq.com.</div>
                     </div>
                     <span class="project-arrow">↗</span>
                 </a>
@@ -530,12 +531,13 @@
             <h2>Okta</h2>
             <p class="section-desc">Identity automation and event-driven workflows built on the Okta platform.</p>
             <div class="projects">
-                <a class="project-card"
-                    href="https://github.com/neilchvz/cairahq-platform/tree/main/workflows/okta"
+                <a class="project-card" href="https://github.com/neilchvz/cairahq-platform/tree/main/workflows/okta"
                     target="_blank">
                     <div class="project-info">
                         <div class="project-name">Okta Workflows — Identity Lifecycle Automation</div>
-                        <div class="project-desc">Event-driven automation triggered by Okta identity events — new user creation fires an admin notification and a personalized welcome email, user deactivation fires an offboarding alert. Built on Okta Workflows with Gmail as the delivery layer.</div>
+                        <div class="project-desc">Event-driven automation triggered by Okta identity events. New user
+                            creation fires an admin notification and a personalized welcome email, user deactivation
+                            fires an offboarding alert. Built on Okta Workflows with Gmail as the delivery layer.</div>
                     </div>
                     <span class="project-arrow">↗</span>
                 </a>
@@ -549,11 +551,13 @@
             <p class="section-desc">Production services and API integrations built in TypeScript and Node.js.</p>
             <div class="projects">
                 <a class="project-card"
-                    href="https://github.com/neilchvz/cairahq-platform/tree/main/workflows/typescript"
-                    target="_blank">
+                    href="https://github.com/neilchvz/cairahq-platform/tree/main/workflows/typescript" target="_blank">
                     <div class="project-info">
                         <div class="project-name">TypeScript Onboarding Service — Caira HQ</div>
-                        <div class="project-desc">A hosted Express service that provides a web UI for user lifecycle management. Form submission triggers a GitHub API call that reads the user roster CSV, appends or removes a row, creates a branch, and opens a PR — Terraform provisions the user on merge. Deployed on Railway with basic auth. Built in TypeScript with Octokit.</div>
+                        <div class="project-desc">A hosted Express service that provides a web UI for user lifecycle
+                            management. Form submission triggers a GitHub API call that reads the user roster CSV,
+                            appends or removes a row, creates a branch, and opens a PR. Terraform provisions the user on
+                            merge. Deployed on Railway with basic auth. Built in TypeScript with Octokit.</div>
                     </div>
                     <span class="project-arrow">↗</span>
                 </a>
@@ -571,7 +575,7 @@
                     target="_blank">
                     <div class="project-info">
                         <div class="project-name">FileVault Compliance Automation</div>
-                        <div class="project-desc">Continuous macOS compliance automation using Addigy Flex Policies —
+                        <div class="project-desc">Continuous macOS compliance automation using Addigy Flex Policies,
                             automatically detecting and remediating both disabled FileVault and missing key escrow
                             across managed fleets, with zero technician involvement.</div>
                     </div>
@@ -582,8 +586,8 @@
                     target="_blank">
                     <div class="project-info">
                         <div class="project-name">Production Monitoring & Alert Routing</div>
-                        <div class="project-desc">Proactive, site-aware ISP monitoring pipeline across 15–20 client
-                            sites — structured alert naming drives automatic ticket creation, SLA routing, and on-call
+                        <div class="project-desc">Proactive, site-aware ISP monitoring pipeline across 15-20 client
+                            sites. Structured alert naming drives automatic ticket creation, SLA routing, and on-call
                             paging with zero manual handling.</div>
                     </div>
                     <span class="project-arrow">↗</span>
@@ -594,7 +598,7 @@
                     <div class="project-info">
                         <div class="project-name">Offboarding Automation</div>
                         <div class="project-desc">Interactive PowerShell script that guides L1 technicians through a
-                            complete M365 offboard — cutting 1.5 hours of manual work down to 15 minutes.</div>
+                            complete M365 offboard, cutting 1.5 hours of manual work down to 15 minutes.</div>
                     </div>
                     <span class="project-arrow">↗</span>
                 </a>
@@ -670,13 +674,17 @@
         <section>
             <div class="section-label">Live Environments</div>
             <h2>Platform Projects</h2>
-            <p class="section-desc">Production environments built around SaaS tooling — identity, access, and
-                automation.</p>
+            <p class="section-desc">Production environments built around SaaS tooling: identity, access, and automation.</p>
             <div class="projects">
                 <a class="project-card" href="https://github.com/neilchvz/cairahq-platform/tree/main" target="_blank">
                     <div class="project-info">
                         <div class="project-name">Caira HQ Platform</div>
-                        <div class="project-desc">A production-grade identity and platform engineering lab running on cairahq.com. Okta federating with Google Workspace via SAML 2.0, automated user provisioning via SCIM, event-driven lifecycle automation via Okta Workflows, and a TypeScript onboarding service hosted on Railway. Identity infrastructure managed as code via Terraform with a full GitOps pipeline — GitHub Actions for CI/CD, HCP Terraform for remote state and approvals.</div>
+                        <div class="project-desc">A production-grade identity and platform engineering lab running on
+                            cairahq.com. Okta federating with Google Workspace via SAML 2.0, automated user provisioning
+                            via SCIM, event-driven lifecycle automation via Okta Workflows, and a TypeScript onboarding
+                            service hosted on Railway. Identity infrastructure managed as code via Terraform with a full
+                            GitOps pipeline: GitHub Actions for CI/CD, HCP Terraform for remote state and approvals.
+                        </div>
                     </div>
                     <span class="project-arrow">↗</span>
                 </a>
