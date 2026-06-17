@@ -3,7 +3,7 @@
 ## Overview
 A shell script that detects the currently connected WiFi network, 
 removes it from the device's preferred networks list, and cycles 
-the WiFi interface — forcing the device to forget the network 
+the WiFi interface, forcing the device to forget the network 
 and reconnect fresh.
 
 ## What this script does
@@ -19,7 +19,7 @@ connecting to the legacy network instead of the new secured one.
 This script was deployed via MDM to silently remove the old network 
 and force devices onto the correct one.
 
-Has since become a general purpose utility — useful any time a user 
+Has since become a general purpose utility. Useful any time a user 
 needs their saved network cleared without navigating through System 
 Settings themselves.
 
