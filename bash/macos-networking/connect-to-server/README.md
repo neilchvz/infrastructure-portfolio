@@ -14,12 +14,12 @@ their credentials and automatically connects them to a remote file server.
 
 ## Why this script exists
 Originally built to automate connections to a Rackspace-hosted file server. 
-The GUI dialog approach was intentional — rather than silently mounting 
+The GUI dialog approach was intentional: rather than silently mounting 
 a drive, the visible prompt served two purposes: notifying users that 
 a connection was being established, and giving them the satisfying sense 
 that IT had built something polished for them.
 
-One of the earlier scripts in this collection — included as a reference 
+One of the earlier scripts in this collection, it's included as a reference 
 for using `osascript` to create user-facing dialogs from shell scripts, 
 a technique that has proven useful across many subsequent workflows.
 
