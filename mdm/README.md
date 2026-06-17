@@ -4,7 +4,7 @@ A library of production MDM configuration profiles and policies built and
 deployed across managed device fleets. Covers both macOS and Windows 
 environments across two MDM platforms.
 
-All profiles have been sanitized — client names, tenant IDs, and 
+All profiles have been sanitized: client names, tenant IDs, and 
 environment-specific values have been replaced with generic placeholders 
 before publishing.
 
