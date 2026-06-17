@@ -3,7 +3,7 @@
 ## Purpose
 
 Automatically enables FileVault on any managed macOS device where it
-is not active. This acts as a continuous compliance backstop — catching
+is not active. This acts as a continuous compliance backstop, catching
 devices where the global MDM enablement profile failed on enrollment,
 or where FileVault was disabled after the fact by the user.
 
@@ -65,7 +65,7 @@ The user must fully log out of their macOS session.
    data, with helpdesk contact information
 
 If the user selects Cancel at the prompt, they return to the login window
-and remain in deferred enablement — FileVault is not enabled. End users
+and remain in deferred enablement. FileVault is not enabled. End users
 should be informed in advance that this prompt requires their action.
 
 The recovery key is escrowed to Addigy at the time of enablement.
@@ -74,7 +74,7 @@ No technician involvement is required after profile deployment.
 ## Notification Script
 
 A script runs at the end of the enablement process displaying a branded
-message from the IT team — explaining what happened, why it matters, and
+message from the IT team, explaining what happened, why it matters, and
 how to reach support with questions. This has proven effective at preventing
 user confusion and support tickets from users who did not expect the prompt.
 
@@ -102,7 +102,7 @@ Your [IT Company] Support Team
 
 The MSP deploys a global MDM policy at enrollment intended to enable
 FileVault on all devices. This catches the cases where that global
-policy does not apply successfully — for example:
+policy does not apply successfully, for example:
 
 - Devices enrolled outside the standard workflow
 - Edge cases where the MDM profile failed to apply
