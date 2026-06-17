@@ -14,7 +14,7 @@ Policy Object (GPO).
   it in place
 
 ## Why this profile exists
-In environments running both Windows and macOS, consistency matters — 
+In environments running both Windows and macOS, consistency matters
 for branding, compliance, and standardization. This profile replicates 
 the same wallpaper enforcement that Group Policy handles on the 
 Windows side, ensuring macOS devices are treated as first class 
