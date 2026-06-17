@@ -25,7 +25,7 @@ WiFi without calling the helpdesk.
 L1 technicians occasionally changed DNS settings to public resolvers 
 during troubleshooting and forgot to revert them. This script gives 
 technically capable end users the ability to update their own DNS 
-back to DHCP — without waiting on IT to fix what IT broke.
+back to DHCP, without waiting on IT to fix what IT broke.
 
 ## Deployment context
 Deployed via Addigy as a one-time run script across standard user 
