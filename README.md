@@ -1,17 +1,21 @@
 # Infrastructure Portfolio
 
-A collection of infrastructure projects built as part of an everlasting pursuit of craft.
+A collection of infrastructure projects, automation scripts, and platform engineering work built hands-on across identity, cloud, and endpoint management.
 
-→ Live at [neilchvz.github.io/infrastructure-portfolio](https://neilchvz.github.io/infrastructure-portfolio/)
+Live at [neilchvz.github.io/infrastructure-portfolio](https://neilchvz.github.io/infrastructure-portfolio/)
 
-Neil Chavez · Creator of things.
+---
 
 ## What's here
 
-This repo will grow to include:
-- Terraform projects (Azure infrastructure, IaC patterns)
-- Automation scripts (PowerShell, Bash, Python)
-- Real world infrastructure scenarios
-- And any other automations/tools that may become relevant in the future
+- **Identity and Access Management** — Okta, Google Workspace, SAML, SCIM, Okta Workflows
+- **Infrastructure as Code** — Terraform, HCP Terraform, GitHub Actions CI/CD pipelines
+- **Automation** — PowerShell, Bash, TypeScript, Node.js
+- **Device Management** — Intune, Addigy, macOS and Windows fleet management
+- **Live Environments** — [Caira HQ Platform](https://github.com/neilchvz/cairahq-platform), a production identity lab running on cairahq.com
+
+---
+
+Neil Chavez · Creator of things.
 
 <!-- >_ curious aren't we? respect. -->
