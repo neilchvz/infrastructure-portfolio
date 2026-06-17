@@ -22,7 +22,7 @@ managed endpoints.
 
 ## Platform
 Built for and deployed via **Addigy MDM**. The image path references 
-the Addigy agent directory — if deploying on Jamf or Intune, update 
+the Addigy agent directory, if deploying on Jamf or Intune, update 
 the `override-picture-path` to match the image deployment path 
 used by that platform.
 
