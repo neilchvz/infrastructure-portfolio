@@ -92,7 +92,7 @@ Addigy evaluates Device Facts on every device check-in
 **Filter:** FileVault Enabled = `True` AND FileVault Key Escrowed = `False`
 
 Targets devices that are encrypted but have no recovery key in Addigy.
-This is the most common gap in a managed fleet — devices that were
+This is the most common gap in a managed fleet: devices that were
 encrypted before MDM enrollment.
 
 **Remediation:**
@@ -186,7 +186,7 @@ cycle, without any manual intervention or scheduled audit.
 | Tool | Role |
 |------|------|
 | **Addigy MDM** | Flex Policy filtering via Device Facts, Smart App deployment, MDM profile delivery |
-| **Addigy Device Facts** | Native FileVault status and key escrow status — no custom scripts required |
+| **Addigy Device Facts** | Native FileVault status and key escrow status. No custom scripts required |
 | **Escrow Buddy (Netflix/macadmins)** | Silent FileVault key rotation at login |
 | **MDM Configuration Profile** | FileVault enablement and FDERecoveryKeyEscrow payload |
 
@@ -209,11 +209,11 @@ filevault-remediation/
 
 | Metric | Before | After |
 |--------|--------|-------|
-| Detection of missing escrow keys | Manual audit — only found when someone looked | Continuous — detected on every device check-in |
-| Remediation of missing escrow keys | Technician required, device must be online | Automatic — resolved at next user login |
-| Detection of FileVault disabled | Manual audit | Continuous — detected on every device check-in |
-| Remediation of FileVault disabled | Manual MDM push or terminal session | Automatic — MDM profile deployed by flex policy |
-| Ongoing maintenance required | Yes — recurring manual checks | None |
+| Detection of missing escrow keys | Manual audit, only found when someone looked | Continuous, detected on every device check-in |
+| Remediation of missing escrow keys | Technician required, device must be online | Automatic, resolved at next user login |
+| Detection of FileVault disabled | Manual audit | Continuous, detected on every device check-in |
+| Remediation of FileVault disabled | Manual MDM push or terminal session | Automatic, MDM profile deployed by flex policy |
+| Ongoing maintenance required | Yes, recurring manual checks | None |
 
 ---
 
