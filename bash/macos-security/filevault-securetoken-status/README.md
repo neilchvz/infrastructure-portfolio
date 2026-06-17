@@ -8,7 +8,7 @@ to unlock FileVault-encrypted drives.
 ## What is SecureToken?
 SecureToken is a cryptographic credential assigned to macOS user accounts 
 that grants them the ability to unlock FileVault-encrypted volumes. Not 
-all users on a device automatically receive a SecureToken — understanding 
+all users on a device automatically receive a SecureToken, understanding 
 which accounts have it is critical for FileVault key management.
 
 ## What this script does
