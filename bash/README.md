@@ -1,7 +1,7 @@
 # Bash Scripts
 
 A library of macOS shell scripts built for real-world fleet management and deployed
-in production via Addigy MDM and RMM tooling. Scripts are intentionally concise — these 
+in production via Addigy MDM and RMM tooling. Scripts are intentionally concise,these 
 are operational utilities designed for reliability and fast deployment, not frameworks.
 
 Covers security hardening, network management, user administration, and system tooling 
