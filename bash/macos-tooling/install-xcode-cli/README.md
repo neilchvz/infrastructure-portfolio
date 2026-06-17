@@ -11,14 +11,14 @@ on macOS devices, handling both modern and legacy macOS versions.
   the correct installation approach
 - For Catalina and newer — fetches the latest non-beta CLI tools 
   from `softwareupdate`
-- For Mojave and older — uses a legacy `softwareupdate` label format
+- For Mojave and older it uses a legacy `softwareupdate` label format
 - Installs the latest available version silently
 - Cleans up temporary files on completion
 
 ## Why this script exists
 Built for a SaaS development client whose engineers needed Xcode CLI 
 tools as a prerequisite for development workflows. Since the developers 
-were local admins they ended up handling it themselves — but the script 
+were local admins they ended up handling it themselves, but the script 
 remains a solid reference for automated Xcode CLI installation across 
 a managed fleet.
 
