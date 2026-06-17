@@ -4,7 +4,7 @@
 
 For clients whose business operations depend on reliable internet — live
 streaming companies, financial services firms, multi-site organizations
-with real-time data dependencies — ISP degradation is not an inconvenience.
+with real-time data dependencies. ISP degradation is not an inconvenience.
 It is a business-impacting event.
 
 The challenge at an MSP managing 15–20 monitored client sites was that
@@ -17,7 +17,7 @@ Beyond that:
 - There was no consistent way to measure office internet performance across
   clients. Home workers, laptops on cellular hotspots, and VPN connections
   all skew results if monitoring is deployed fleet-wide.
-- Different clients had wildly different acceptable thresholds — a client
+- Different clients had wildly different acceptable thresholds. A client
   paying for 1 Gbps with deep packet inspection enabled has a very different
   effective throughput ceiling than one on a clean 500 Mbps line.
 - 24x7 clients needed automated on-call paging when alerts fired outside
@@ -25,7 +25,7 @@ Beyond that:
 
 The goal was a **proactive, site-aware monitoring system** that could detect
 ISP degradation before clients noticed it, route alerts to the right place
-automatically, and page the on-call tech for critical clients — with zero
+automatically, and page the on-call tech for critical clients, with zero
 manual handling between alert and ticket.
 
 ---
@@ -102,14 +102,14 @@ in the loop.
 
 Deploying speedtest scripts fleet-wide produces meaningless data. Laptops
 on home Wi-Fi, machines connected over client VPN, devices on cellular
-hotspots — all of these return results that reflect the individual user's
+hotspots: all of these return results that reflect the individual user's
 connection, not the office ISP.
 
 The solution is one stationary, wired or primary-network Mac per office
 location, scoped to the monitoring policy by serial number. This machine
 never moves. Its results represent the office connection, not a user.
 
-Addigy Flex Policies make this precise — the policy only auto-assigns
+Addigy Flex Policies make this precise: the policy only auto-assigns
 devices that match the serial number filter. New devices enrolled in that
 client's Addigy tenant are never accidentally pulled into the monitoring policy.
 
@@ -202,7 +202,7 @@ not by modification.
 |------|------|
 | **Addigy MDM** | Policy scoping, Device Facts, Monitoring Alerts, alert email delivery |
 | **Addigy Speedtest CLI** | WAN speed measurement on managed macOS devices |
-| **Bash** | Device Fact scripts — speed test execution and output parsing |
+| **Bash** | Device Fact scripts: speed test execution and output parsing |
 | **ConnectWise Manage** | Email parsing, ticket creation, SLA enforcement, on-call routing |
 
 ---
@@ -227,11 +227,11 @@ production-monitoring/
 
 | Metric | Before | After |
 |--------|--------|-------|
-| Detection method | Reactive — client calls when impacted | Proactive — alert fires before client notices |
-| Ticket creation | Manual — tech receives email and creates ticket | Automatic — parser creates fully routed ticket |
-| On-call paging for 24x7 clients | Manual — depended on NOC tech seeing the email | Automatic — triggered by ticket creation |
-| Threshold accuracy | N/A — no monitoring existed | Per-client, per-site, stack-aware |
-| False positives | N/A | Minimal — thresholds account for full network stack |
+| Detection method | Reactive, client calls when impacted | Proactive, alert fires before client notices |
+| Ticket creation | Manual, tech receives email and creates ticket | Automatic, parser creates fully routed ticket |
+| On-call paging for 24x7 clients | Manual, depended on NOC tech seeing the email | Automatic, triggered by ticket creation |
+| Threshold accuracy | N/A, no monitoring existed | Per-client, per-site, stack-aware |
+| False positives | N/A | Minimal, thresholds account for full network stack |
 
 ---
 
