@@ -2,7 +2,7 @@
 
 ## The Problem
 
-For clients whose business operations depend on reliable internet — live
+For clients whose business operations depend on reliable internet: live
 streaming companies, financial services firms, multi-site organizations
 with real-time data dependencies. ISP degradation is not an inconvenience.
 It is a business-impacting event.
@@ -141,7 +141,7 @@ Degradation directly impacts paying subscribers mid-class.
 | Firewall ceiling | No reduction (hardware rated above contracted) |
 | AMP + IDP overhead | ~20% → 400 Mbps effective |
 | Client VPN | Not active → no reduction |
-| Variance buffer | Conservative — livestream dependency |
+| Variance buffer | Conservative, livestream dependency |
 | **Alert threshold** | **300 Mbps** |
 
 The threshold is intentionally conservative. A brief dip to 320 Mbps
@@ -169,7 +169,7 @@ This single string carries:
 
 The parser matches on `[Company: X]`, links to the correct company record,
 and applies the board, type, SLA, and escalation rules configured for that
-client — automatically.
+client, automatically.
 
 A correctly named alert requires no manual ticket handling from alert to
 resolution. A misconfigured name breaks the entire routing chain silently.
