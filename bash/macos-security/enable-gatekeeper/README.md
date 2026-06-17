@@ -10,12 +10,12 @@ application security policy and preventing unverified software from
 running on the device.
 
 ## Why this script exists
-This script shares the same origin as the Enable Firewall script — 
+This script shares the same origin as the Enable Firewall script, 
 built for a SaaS development client who declined MDM configuration 
 profiles but agreed to a baseline of non-negotiable security requirements. 
 Gatekeeper enforcement was one of those requirements.
 
-Also used as a compliance remediation script — when Addigy's compliance 
+Also used as a compliance remediation script. When Addigy's compliance 
 engine detects Gatekeeper is disabled on a managed device, this script 
 runs automatically to remediate without manual intervention.
 
