@@ -10,7 +10,7 @@ The correct threshold accounts for every layer of the network stack that consume
 bandwidth before it reaches the end user. This guide documents the calculation
 methodology used across all monitored sites.
 
-This decision is made by the senior network architect per client and per site —
+This decision is made by the senior network architect per client and per site,
 not by the technician configuring the alert.
 
 ---
@@ -34,7 +34,7 @@ not the original contracted speed.
 ## Layer Breakdown
 
 ### 1. Contracted ISP Speed
-The speed the client is paying for. This is the ceiling — actual throughput
+The speed the client is paying for. This is the ceiling: actual throughput
 will always be below this due to the layers below.
 
 Get this from the client's ISP contract or last invoice.
@@ -75,7 +75,7 @@ Apply this reduction to the firewall ceiling from Step 2, not the contracted spe
 
 ### 4. Client VPN Overhead
 If users connect to a client VPN concentrator hosted behind this firewall, VPN
-tunneling adds encryption overhead that further reduces available bandwidth —
+tunneling adds encryption overhead that further reduces available bandwidth,
 even for users who are not actively on VPN, as the VPN service itself consumes
 firewall resources.
 
@@ -95,7 +95,7 @@ variance that does not represent a real degradation event.
 Recommended buffer: **10–15% below your calculated threshold.**
 
 This means the alert only fires when throughput is meaningfully below
-acceptable levels — not on a single test result that caught a 30-second
+acceptable levels, not on a single test result that caught a 30-second
 ISP hiccup.
 
 ---
@@ -106,7 +106,7 @@ ISP hiccup.
 | Layer | Value | Notes |
 |-------|-------|-------|
 | Contracted speed | 500 Mbps | ISP contract |
-| Firewall ceiling | 500 Mbps | Firewall rated above contracted speed — no reduction |
+| Firewall ceiling | 500 Mbps | Firewall rated above contracted speed. No reduction |
 | AMP + IDP overhead | ~20% reduction | → 400 Mbps |
 | Client VPN | None active | → 400 Mbps |
 | Variance buffer | ~25% | Business criticality: livestreaming |
@@ -144,7 +144,7 @@ impacts paying subscribers. The threshold is intentionally conservative.
 ## Key Principle
 
 The threshold represents the minimum acceptable throughput given the client's
-full network stack — not a percentage of contracted speed applied uniformly
+full network stack, not a percentage of contracted speed applied uniformly
 across all clients.
 
 Two clients with the same ISP package will have different thresholds if their
