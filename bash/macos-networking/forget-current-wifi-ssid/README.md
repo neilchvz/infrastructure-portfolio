@@ -34,7 +34,7 @@ sudo bash forget-current-wifi-ssid.sh
 ```
 
 ## Note
-This script targets the `en0` interface — the default WiFi adapter 
+This script targets the `en0` interface, the default WiFi adapter 
 on most Macs. Verify the interface name on the target device if 
 results are unexpected.
 
