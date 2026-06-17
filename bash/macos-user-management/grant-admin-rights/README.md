@@ -12,7 +12,7 @@ account modification in System Settings.
 ## Why this script exists
 In environments following the principle of least privilege, all users 
 run as standard accounts by default. Occasionally a C-level executive 
-or highly technical user requires local admin access — typically backed 
+or highly technical user requires local admin access, typically backed 
 by a signed waiver acknowledging the associated risk.
 
 Rather than walking a technician through System Settings or scheduling 
@@ -22,7 +22,7 @@ touching the device.
 
 ## Deployment context
 Run on-demand via Addigy or RMM as a targeted script on specific devices. 
-Not deployed fleet-wide — intended for individual use cases only.
+Not deployed fleet-wide: intended for individual use cases only.
 
 ## Usage
 ```bash
