@@ -46,7 +46,7 @@ separate step that could be missed.
 ## User Experience
 
 Unlike the escrow remediation policy, this one is visible to the user.
-Addigy's FileVault Device Setting uses **deferred enablement** — FileVault
+Addigy's FileVault Device Setting uses **deferred enablement**: FileVault
 does not begin encrypting immediately after the profile is installed.
 Instead, encryption is triggered the next time a Secure Token user
 performs a full logout and login.
@@ -55,11 +55,11 @@ performs a full logout and login.
 The user must fully log out of their macOS session.
 
 **The flow:**
-1. MDM profile installs on the device — no immediate user impact
+1. MDM profile installs on the device, no immediate user impact
 2. On next logout, macOS presents a prompt:
    *"To add this user to FileVault, enter the password for [username]"*
 3. User enters their password to confirm enablement
-4. User logs back in — encryption begins in the background
+4. User logs back in, encryption begins in the background
 5. A notification script fires at completion, displaying a message from
    the IT team explaining that FileVault has been enabled to protect their
    data, with helpdesk contact information
