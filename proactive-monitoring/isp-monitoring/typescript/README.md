@@ -20,15 +20,13 @@ The fix was to stop tracking state locally at all. Every poll asks the PSA fresh
 
 ## Files
 
+```
 src/
-
 ├── index_example.ts            # entry point, starts the polling loop on an interval
-
 ├── monitor_example.ts           # the poll cycle: check status, find and close matching tickets
-
 ├── uptimerobot_example.ts        # API client for the monitoring tool
-
 └── connectwise_example.ts         # API client for the PSA
+```
 
 Each API integration lives in its own file, separate from the orchestration logic in `monitor_example.ts`. That split means swapping either tool later only touches one file.
 
