@@ -134,5 +134,3 @@ real alerts are lost without any indication of failure.
 | No ticket created at all | Mailbox polling issue, or email landed in spam |
 
 ---
-
-*Part of the [Automation Portfolio](https://github.com/neilchvz) · Neil Chavez · Creator of things.*
