@@ -2,7 +2,7 @@
 
 ## The problem
 
-Diligex monitors ISP uptime for clients as part of managed services. The original setup pinged each client's circuit using a monitor tied to a device record inside the RMM platform, and that device record was what told the system which client the alert belonged to.
+MSPs monitors ISP uptime for clients as part of managed services. At one of the MSPs I worked for, the original setup pinged each client's circuit using a monitor tied to a device record inside an RMM platform, and that device record was what told the system which client the alert belonged to.
 
 The problem showed up during routine offboarding. When a device tied to a monitor got retired, the monitor lost its routing along with it, and it stopped generating tickets entirely. Nobody found out until a client called asking why their internet had been down for an hour with no ticket and no page. For a client on a 24x7 SLA, that's not a minor gap, that's the exact failure the monitoring exists to prevent.
 
@@ -27,13 +27,13 @@ flowchart LR
     D -->|"posts note,<br/>closes ticket"| C
 ```
 
-Nothing in this flow talks to anything else directly. The monitor doesn't know about the PSA, the PSA's parser doesn't know about the closer service, and the closer service doesn't create tickets, only closes them. The only thing holding it together is that all three pieces use the exact same naming convention for a given client and circuit: `[Company: ClientName | ISP Name]`. That string is the monitor's name, the alert email's subject line, and the ticket's summary, all identical, which means the closer service can search the PSA for a ticket using nothing but the monitor's own name, no shared database or lookup table required.
+Nothing in this flow talks to anything else directly. The monitor doesn't know about the PSA, the PSA's parser doesn't know about the closer service, and the closer service doesn't create tickets, only closes them. The only thing holding it together is that all three pieces use the exact same naming convention for a given client and circuit: `[Company: CompanyID | ISP Name]`. That string is the monitor's name, the alert email's subject line, and the ticket's summary, all identical, which means the closer service can search the PSA for a ticket using nothing but the monitor's own name, no shared database or lookup table required.
 
 ## Rolling out to a new client
 
 No code changes. Three steps, all configuration:
 
-1. Create a monitor for the client's ISP circuit using the `[Company: ClientName | ISP Name]` naming convention.
+1. Create a monitor for the client's ISP circuit using the `[Company: CompanyID | ISP Name]` naming convention.
 2. Add a matching parsing rule in the PSA's email connector so the alert routes to the right client, board, and priority.
 3. Nothing else. The closer service already polls every monitor on the account and picks up new ones automatically on the next cycle.
 
