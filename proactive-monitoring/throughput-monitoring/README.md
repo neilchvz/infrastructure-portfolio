@@ -1,4 +1,4 @@
-# Production Monitoring & Alert Routing
+# Throughput Monitoring & Alert Routing
 
 ## The Problem
 
@@ -23,7 +23,7 @@ Beyond that:
 - 24x7 clients needed automated on-call paging when alerts fired outside
   business hours. Manual ticket creation defeated the purpose.
 
-The goal was a **proactive, site-aware monitoring system** that could detect
+The goal was a **proactive, site-aware throughput monitoring system** that could detect
 ISP degradation before clients noticed it, route alerts to the right place
 automatically, and page the on-call tech for critical clients, with zero
 manual handling between alert and ticket.
@@ -32,7 +32,7 @@ manual handling between alert and ticket.
 
 ## The Solution
 
-A multi-layer monitoring pipeline built across Addigy MDM and ConnectWise
+A multi-layer throughput monitoring pipeline built across Addigy MDM and ConnectWise
 Manage, using structured alert naming as the routing mechanism.
 
 Each monitored client site has a single **designated stationary office Mac**
@@ -210,7 +210,7 @@ not by modification.
 ## Repository Structure
 
 ```
-production-monitoring/
+throughput-monitoring/
 ├── README.md                                  ← this file
 ├── device-facts/
 │   ├── internet-speed-download.sh             ← Addigy Device Fact script
@@ -235,4 +235,4 @@ production-monitoring/
 
 ---
 
-*Part of the [Automation Portfolio](https://github.com/neilchvz)*
+*Part of the [Proactive Monitoring Portfolio](https://github.com/neilchvz)*
