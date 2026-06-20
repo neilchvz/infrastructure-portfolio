@@ -61,15 +61,15 @@ as its primary match key.
 
 | Setting | Value |
 |---------|-------|
-| Subject contains | `[Company: The Class]` |
-| Company | The Class *(linked to CW company record)* |
+| Subject contains | `[Company: Acme Corp]` |
+| Company | Acme Corp *(linked to CW company record)* |
 | Board | NOC |
 | Type | Alert |
 | Subtype | Network |
 | Priority | High |
 | SLA | 24x7 Response SLA |
 
-When an email arrives with `[Company: The Class]` in the subject, this
+When an email arrives with `[Company: Acme Corp]` in the subject, this
 rule fires and the ticket is created with all fields pre-populated.
 
 ---
