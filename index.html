@@ -561,6 +561,19 @@
                     </div>
                     <span class="project-arrow">↗</span>
                 </a>
+                <a class="project-card"
+                    href="https://github.com/neilchvz/infrastructure-portfolio/tree/main/proactive-monitoring/isp-monitoring/typescript"
+                    target="_blank">
+                    <div class="project-info">
+                        <div class="project-name">ISP Monitor Closer — Automated Ticket Closure</div>
+                        <div class="project-desc">A Railway-hosted service that checks ISP uptime status on a fixed
+                            schedule and closes the matching PSA ticket once an outage resolves. Built to be
+                            restart-safe: every check looks up the ticket directly rather than remembering what happened
+                            last time, so nothing gets missed if the service redeploys. Built in TypeScript with Axios.
+                        </div>
+                    </div>
+                    <span class="project-arrow">↗</span>
+                </a>
             </div>
         </section>
 
@@ -582,13 +595,14 @@
                     <span class="project-arrow">↗</span>
                 </a>
                 <a class="project-card"
-                    href="https://github.com/neilchvz/infrastructure-portfolio/tree/main/automation/production-monitoring"
+                    href="https://github.com/neilchvz/infrastructure-portfolio/tree/main/proactive-monitoring/isp-monitoring/automation"
                     target="_blank">
                     <div class="project-info">
-                        <div class="project-name">Production Monitoring & Alert Routing</div>
-                        <div class="project-desc">Proactive, site-aware ISP monitoring pipeline across 15-20 client
-                            sites. Structured alert naming drives automatic ticket creation, SLA routing, and on-call
-                            paging with zero manual handling.</div>
+                        <div class="project-name">ISP Monitoring & Ticket Routing Setup</div>
+                        <div class="project-desc">One naming convention does all the work here. Each ISP circuit gets a
+                            monitor named to match a ticketing parser rule, so an outage creates a fully routed ticket
+                            with no shared database or extra code connecting the two tools. Adding a new client is three
+                            settings changes, nothing to deploy.</div>
                     </div>
                     <span class="project-arrow">↗</span>
                 </a>
@@ -599,6 +613,42 @@
                         <div class="project-name">Offboarding Automation</div>
                         <div class="project-desc">Interactive PowerShell script that guides L1 technicians through a
                             complete M365 offboard, cutting 1.5 hours of manual work down to 15 minutes.</div>
+                    </div>
+                    <span class="project-arrow">↗</span>
+                </a>
+            </div>
+        </section>
+
+        <!-- Proactive Monitoring -->
+        <section>
+            <div class="section-label">Proactive Monitoring</div>
+            <h2>Monitoring & Alerting</h2>
+            <p class="section-desc">Catching problems before a client reports them, with automated alerting and
+                resolution where possible.</p>
+            <div class="projects">
+                <a class="project-card"
+                    href="https://github.com/neilchvz/infrastructure-portfolio/tree/main/proactive-monitoring/isp-monitoring"
+                    target="_blank">
+                    <div class="project-info">
+                        <div class="project-name">ISP Monitoring & Auto-Resolution</div>
+                        <div class="project-desc">Replaced a fragile ISP monitoring setup where alerts were tied to
+                            device records and silently broke during routine offboarding. The new pipeline watches
+                            circuits independently of any device, creates a ticket automatically on outage, and closes
+                            it automatically once the circuit recovers, removing both the missed-alert risk and the
+                            manual ticket cleanup.</div>
+                    </div>
+                    <span class="project-arrow">↗</span>
+                </a>
+                <a class="project-card"
+                    href="https://github.com/neilchvz/infrastructure-portfolio/tree/main/proactive-monitoring/throughput-monitoring"
+                    target="_blank">
+                    <div class="project-info">
+                        <div class="project-name">Throughput Monitoring & Alert Routing</div>
+                        <div class="project-desc">Site-aware throughput monitoring across 15-20 client locations
+                            using a single designated device per site to avoid skewed results from roaming
+                            connections. Per-client, per-site thresholds account for the full network stack, and
+                            structured alert naming drives automatic ticket creation, SLA routing, and on-call paging
+                            for 24x7 clients.</div>
                     </div>
                     <span class="project-arrow">↗</span>
                 </a>
@@ -674,7 +724,8 @@
         <section>
             <div class="section-label">Live Environments</div>
             <h2>Platform Projects</h2>
-            <p class="section-desc">Production environments built around SaaS tooling: identity, access, and automation.</p>
+            <p class="section-desc">Production environments built around SaaS tooling: identity, access, and automation.
+            </p>
             <div class="projects">
                 <a class="project-card" href="https://github.com/neilchvz/cairahq-platform/tree/main" target="_blank">
                     <div class="project-info">
