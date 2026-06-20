@@ -71,9 +71,9 @@ in the loop.
                      ▼
 ┌─────────────────────────────────────────────────────┐
 │  Structured alert email                             │
-│  Subject: [Company: The Class] -                    │
+│  Subject: [Company: ExampleCo] -                    │
 │           Internet Download Speed Low               │
-│           (LA_Santa Monica)                         │
+│           (Site_Location)                           │
 │  To: noc@company.com                                │
 └────────────────────┬────────────────────────────────┘
                      │  ConnectWise polls mailbox
@@ -121,8 +121,7 @@ Alert thresholds are not set at the contracted ISP speed. That approach
 generates constant false-positive alerts because real-world throughput
 is always lower than contracted speed due to the network stack.
 
-Each threshold is calculated by the senior architect per client, per site,
-accounting for:
+Each threshold is calculated per client, per site, accounting for:
 
 - ISP contracted speed
 - Firewall hardware throughput ceiling
@@ -130,10 +129,10 @@ accounting for:
 - Client VPN overhead if active
 - A variance buffer appropriate to the client's business criticality
 
-### Example — The Class (LA Santa Monica)
+### Example — A Streaming Client
 
-The Class streams live fitness classes from their Santa Monica studio.
-Degradation directly impacts paying subscribers mid-class.
+This example client streams live content from a single studio location.
+Degradation directly impacts paying subscribers mid-stream.
 
 | Layer | Calculation |
 |-------|-------------|
@@ -159,7 +158,7 @@ The alert name in Addigy becomes the email subject line. The subject line
 is what ConnectWise's email parser uses to route the ticket.
 
 ```
-[Company: The Class] - Internet Download Speed Low (LA_Santa Monica)
+[Company: ExampleCo] - Internet Download Speed Low (Site_Location)
 ```
 
 This single string carries:
@@ -185,7 +184,7 @@ At full deployment this system manages:
 
 - **15–20 monitored client sites**
 - **2 alerts per site** (upload + download)
-- **Multiple locations per client** where applicable (The Class monitors
+- **Multiple locations per client** where applicable (One client in this deployment monitors
   three streaming locations across LA and New York)
 - **Varying thresholds** per client and per site based on individual
   network stack analysis
