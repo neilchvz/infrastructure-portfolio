@@ -12,6 +12,4 @@ Each workflow in this repository documents a complete end-to-end solution: the p
 | [FileVault Compliance Automation](./filevault-remediation/) | Continuous macOS compliance automation using Addigy Flex Policies. Detects and remediates both disabled FileVault and missing key escrow across managed fleets with zero technician involvement. |
 
 ---
-
-Neil Chavez · Creator of things.
 <!-- >_ curious aren't we? respect. -->
