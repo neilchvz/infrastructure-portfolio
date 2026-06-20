@@ -234,5 +234,3 @@ throughput-monitoring/
 | False positives | N/A | Minimal, thresholds account for full network stack |
 
 ---
-
-*Part of the [Proactive Monitoring Portfolio](https://github.com/neilchvz)*
