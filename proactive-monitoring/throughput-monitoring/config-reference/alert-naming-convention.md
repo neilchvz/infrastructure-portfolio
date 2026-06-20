@@ -22,18 +22,16 @@ alert lands in a generic queue with no client association and no SLA.
 
 | Field | Description | Example |
 |-------|-------------|---------|
-| `{Client Name}` | Exact client name as it appears in ConnectWise | `The Class` |
+| `{Client Name}` | Exact client name as it appears in ConnectWise | `ExCompany` |
 | `{Metric}` | What is being measured | `Internet Download Speed`, `Internet Upload Speed` |
 | `{Direction}` | Alert condition | `Low` |
-| `{Site Identifier}` | Location in format `Region_City` | `LA_Santa Monica`, `NY_New York` |
+| `{Site Identifier}` | Location in format `Region_City` | `State_City`, `City_Neighborhood` |
 
 ### Full Examples
 
 ```
-[Company: The Class] - Internet Download Speed Low (LA_Santa Monica)
-[Company: The Class] - Internet Upload Speed Low (LA_Santa Monica)
-[Company: The Class] - Internet Download Speed Low (NY_New York)
-[Company: Acme Corp] - Internet Download Speed Low (HQ_Chicago)
+[Company: Acme Corp] - Internet Download Speed Low (NY_New York)
+[Company: Acme Corp] - Internet Download Speed Low (LA_Santa Monica)
 ```
 
 ---
@@ -71,7 +69,7 @@ ConnectWise → Companies → search client → copy Display Name exactly
 ```
 
 Common failure modes:
-- `The Class` vs `The Class LLC` — parser fails
+- `Acme Corp` vs `Acme Corp LLC` — parser fails
 - `Acme` vs `Acme Corp` — parser fails
 - Extra spaces, different capitalisation — parser fails
 
