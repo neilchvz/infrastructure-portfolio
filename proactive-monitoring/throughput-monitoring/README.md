@@ -185,7 +185,7 @@ At full deployment this system manages:
 - **15–20 monitored client sites**
 - **2 alerts per site** (upload + download)
 - **Multiple locations per client** where applicable (One client in this deployment monitors
-  three streaming locations across LA and New York)
+  three streaming locations across two states)
 - **Varying thresholds** per client and per site based on individual
   network stack analysis
 
