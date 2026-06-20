@@ -108,5 +108,3 @@ Upload and download thresholds may differ. A client with asymmetric internet
 each direction. See `threshold-guide.md` for the full calculation methodology.
 
 ---
-
-*Part of the [Automation Portfolio](https://github.com/neilchvz) · Neil Chavez · Creator of things.*
