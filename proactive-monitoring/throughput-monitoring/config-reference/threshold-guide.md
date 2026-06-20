@@ -102,7 +102,7 @@ ISP hiccup.
 
 ## Worked Examples
 
-### Example A — The Class (LA Santa Monica Office)
+### Example A — A Streaming Company
 | Layer | Value | Notes |
 |-------|-------|-------|
 | Contracted speed | 500 Mbps | ISP contract |
@@ -112,7 +112,7 @@ ISP hiccup.
 | Variance buffer | ~25% | Business criticality: livestreaming |
 | **Alert threshold set at** | **300 Mbps** | Conservative due to livestream dependency |
 
-The Class streams live fitness classes from this office. Degradation directly
+A Streaming Company streams live from their office. Degradation directly
 impacts paying subscribers. The threshold is intentionally conservative.
 
 ---
