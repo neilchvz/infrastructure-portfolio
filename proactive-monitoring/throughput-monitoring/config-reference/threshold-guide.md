@@ -154,5 +154,3 @@ Always confirm the threshold with the senior architect before deploying a
 new monitoring alert.
 
 ---
-
-*Part of the [Automation Portfolio](https://github.com/neilchvz) · Neil Chavez · Creator of things.*
