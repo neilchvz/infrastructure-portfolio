@@ -10,7 +10,7 @@ The shared idea across everything here is the same regardless of what's being wa
 
 **[ISP Monitoring](isp-monitoring/)** — watches client ISP circuits for outages, creates a ticket automatically when one drops, and closes that ticket automatically once the circuit recovers. Built to replace a fragile setup where monitors were tied to device records and silently broke during routine offboarding.
 
-**Speedtest Monitoring** — *(moving here, link to follow)*
+**[Throughput Monitoring](throughput-monitoring/)** — runs scheduled speed tests against a designated office device per client site, alerts when throughput drops below a per-client calculated threshold, and routes the resulting ticket through ConnectWise with automatic on-call paging for 24x7 clients. Detection and routing only, no automatic resolution, the goal is catching degradation before a client notices, not fixing it.
 
 ---
 
