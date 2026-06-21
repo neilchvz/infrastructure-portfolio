@@ -535,9 +535,10 @@
                     target="_blank">
                     <div class="project-info">
                         <div class="project-name">Okta Workflows — Identity Lifecycle Automation</div>
-                        <div class="project-desc">Event-driven automation triggered by Okta identity events. New user
-                            creation fires an admin notification and a personalized welcome email, user deactivation
-                            fires an offboarding alert. Built on Okta Workflows with Gmail as the delivery layer.</div>
+                        <div class="project-desc">Built on Okta Workflows, these automations trigger in response to Okta
+                            identity events. New user creation triggers an admin notification and a personalized welcome
+                            email to the new hire. User deactivation triggers an offboarding alert email to the admin.
+                            Gmail handles the email delivery.</div>
                     </div>
                     <span class="project-arrow">↗</span>
                 </a>
@@ -554,10 +555,13 @@
                     href="https://github.com/neilchvz/cairahq-platform/tree/main/workflows/typescript" target="_blank">
                     <div class="project-info">
                         <div class="project-name">TypeScript Onboarding Service — Caira HQ</div>
-                        <div class="project-desc">A hosted Express service that provides a web UI for user lifecycle
-                            management. Form submission triggers a GitHub API call that reads the user roster CSV,
-                            appends or removes a row, creates a branch, and opens a PR. Terraform provisions the user on
-                            merge. Deployed on Railway with basic auth. Built in TypeScript with Octokit.</div>
+                        <div class="project-desc">A hosted Express service that provides a web UI for user
+                            on/offboarding
+                            management. A form submission triggers a GitHub API call that updates the user roster CSV,
+                            adding or removing a row, then creates a branch and opens a pull request for review. Once
+                            that's merged, Terraform creates the user in Okta. Deployed on Railway with basic auth.
+                            Built
+                            in TypeScript with Octokit.</div>
                     </div>
                     <span class="project-arrow">↗</span>
                 </a>
@@ -568,7 +572,8 @@
                         <div class="project-name">ISP Monitor Closer — Automated Ticket Closure</div>
                         <div class="project-desc">A Railway-hosted service that checks ISP uptime status on a fixed
                             schedule and closes the matching PSA ticket once an outage resolves. Built to be
-                            restart-safe: every check looks up the ticket directly rather than remembering what happened
+                            restart-safe: every poll check looks up the ticket directly rather than remembering what
+                            happened
                             last time, so nothing gets missed if the service redeploys. Built in TypeScript with Axios.
                         </div>
                     </div>
@@ -588,9 +593,10 @@
                     target="_blank">
                     <div class="project-info">
                         <div class="project-name">FileVault Compliance Automation</div>
-                        <div class="project-desc">Continuous macOS compliance automation using Addigy Flex Policies,
-                            automatically detecting and remediating both disabled FileVault and missing key escrow
-                            across managed fleets, with zero technician involvement.</div>
+                        <div class="project-desc">Continuously checks managed macOS devices for FileVault disabled or
+                            FileVault recovery key not escrowed. When either shows up, the device is added to an Addigy
+                            Flex Policy and it is remediated automatically. No technician involvement is required.
+                        </div>
                     </div>
                     <span class="project-arrow">↗</span>
                 </a>
@@ -599,10 +605,10 @@
                     target="_blank">
                     <div class="project-info">
                         <div class="project-name">ISP Monitoring & Ticket Routing Setup</div>
-                        <div class="project-desc">One naming convention does all the work here. Each ISP circuit gets a
-                            monitor named to match a ticketing parser rule, so an outage creates a fully routed ticket
-                            with no shared database or extra code connecting the two tools. Adding a new client is three
-                            settings changes, nothing to deploy.</div>
+                        <div class="project-desc">Each ISP circuit gets a monitor with a name that matches a ticketing
+                            parser rule. When the circuit goes down, that naming match is what routes the alert into a
+                            fully assigned ticket, no shared database or extra code connecting the two tools. Adding a
+                            new client is three settings changes. Nothing to deploy.</div>
                     </div>
                     <span class="project-arrow">↗</span>
                 </a>
@@ -630,11 +636,12 @@
                     target="_blank">
                     <div class="project-info">
                         <div class="project-name">ISP Monitoring & Auto-Resolution</div>
-                        <div class="project-desc">Replaced a fragile ISP monitoring setup where alerts were tied to
-                            device records and silently broke during routine offboarding. The new pipeline watches
-                            circuits independently of any device, creates a ticket automatically on outage, and closes
-                            it automatically once the circuit recovers, removing both the missed-alert risk and the
-                            manual ticket cleanup.</div>
+                        <div class="project-desc">Built to replace an ISP monitoring setup where alerts were tied to a
+                            device record that wasn't permanent. Retiring that device during routine offboarding would
+                            silently break monitoring with no warning. The new system watches each circuit on its own,
+                            independent of any device. When a circuit goes down, it creates a ticket automatically. When
+                            it recovers, the ticket closes automatically too, removing both the missed-alert risk and
+                            the manual ticket cleanup.</div>
                     </div>
                     <span class="project-arrow">↗</span>
                 </a>
@@ -643,11 +650,12 @@
                     target="_blank">
                     <div class="project-info">
                         <div class="project-name">Throughput Monitoring & Alert Routing</div>
-                        <div class="project-desc">Site-aware throughput monitoring across 15-20 client locations
-                            using a single designated device per site to avoid skewed results from roaming
-                            connections. Per-client, per-site thresholds account for the full network stack, and
-                            structured alert naming drives automatic ticket creation, SLA routing, and on-call paging
-                            for 24x7 clients.</div>
+                        <div class="project-desc">Watches throughput across client locations using one designated device
+                            per site, so results reflect the office connection instead of someone's laptop roaming on
+                            Wi-Fi or VPN. Each client and site gets its own threshold, calculated from the full network
+                            stack, not just the contracted speed. When a threshold is crossed, a structured alert name
+                            automatically creates a routed ticket, applies the right SLA, and pages on-call for 24x7
+                            clients.</div>
                     </div>
                     <span class="project-arrow">↗</span>
                 </a>
@@ -664,7 +672,7 @@
                     target="_blank">
                     <div class="project-info">
                         <div class="project-name">PowerShell Infrastructure Library</div>
-                        <div class="project-desc">24 production scripts across identity lifecycle, Zero Trust,
+                        <div class="project-desc">24 production scripts covering identity lifecycle, Zero Trust,
                             messaging, data governance, hybrid identity, endpoint configuration, and Azure
                             infrastructure.</div>
                     </div>
@@ -729,7 +737,8 @@
                 <a class="project-card" href="https://github.com/neilchvz/cairahq-platform/tree/main" target="_blank">
                     <div class="project-info">
                         <div class="project-name">Caira HQ Platform</div>
-                        <div class="project-desc">A production-grade identity and platform engineering environment running on
+                        <div class="project-desc">A production-grade identity and platform engineering environment
+                            running on
                             cairahq.com. Okta federating with Google Workspace via SAML 2.0, automated user provisioning
                             via SCIM, event-driven lifecycle automation via Okta Workflows, and a TypeScript onboarding
                             service hosted on Railway. Identity infrastructure managed as code via Terraform with a full
